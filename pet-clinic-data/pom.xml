@@ -10,6 +10,15 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>pet-clinic-data</artifactId>
+    <properties>
+        <!-- without below configuration , by default maven creates fat executable jar
+         including all the  dependencies and libraries,
+        and only to include bean classes from the modules alone . if the below configuration
+         is not present then you will get "Unable to find main class" Error-->
+
+       <spring-boot.repackage.skip>true</spring-boot.repackage.skip>
+
+    </properties>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -49,19 +58,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <executions>
-                    <!-- without below configuration , by default maven creates fat executable jar
-                     including all the  dependencies and libraries,
-                    and only to include bean classes from the modules alone  -->
-                    <execution>
-                        <goals>
-                            <goal>repackage</goal>
-                        </goals>
-                        <configuration>
-                            <skip>true</skip>
-                        </configuration>
-                    </execution>
-                </executions>
+
             </plugin>
 
         </plugins>
