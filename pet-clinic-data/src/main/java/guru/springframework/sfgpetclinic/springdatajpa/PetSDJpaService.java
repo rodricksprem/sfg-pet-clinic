@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.HashSet;
 import java.util.Set;
 @Service
-@Profile("PetSDJpaService")
+@Profile("springdatajpa")
 public class PetSDJpaService implements PetService {
     private final PetRepository petRepository;
 

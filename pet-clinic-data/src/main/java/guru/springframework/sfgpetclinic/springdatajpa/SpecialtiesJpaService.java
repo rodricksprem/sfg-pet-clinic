@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.HashSet;
 import java.util.Set;
 @Service
-@Profile("SpecialtiesJpaService")
+@Profile("springdatajpa")
 public class SpecialtiesJpaService implements SpecialtiesService {
     private final SpecialtyRepository specialtyRepository;
 
