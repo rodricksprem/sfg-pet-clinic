@@ -7,6 +7,12 @@
         <module>pet-clinic-data</module>
 		<module>pet-clinic-web</module>
 	</modules>
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
+    </dependencies>
     <parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
