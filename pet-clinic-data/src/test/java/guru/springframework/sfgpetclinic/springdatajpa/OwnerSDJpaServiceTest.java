@@ -63,7 +63,7 @@ class OwnerSDJpaServiceTest {
         Owner newOwner = Owner.builder().id(ID).lastName(LASTNAME).build();
         Owner savedOwner = ownerSDJpaService.save(newOwner);
         assertNotNull(savedOwner);
-        verify(ownerRepository.save(any()));
+        verify(ownerRepository).save(any());
 
     }
 
